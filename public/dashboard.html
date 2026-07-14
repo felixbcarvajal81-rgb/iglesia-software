@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Church System - Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>&#9769; Church System</h2>
+        <p>Gestion de Iglesia</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active" data-page="dashboard"><span class="icon">&#9632;</span> Dashboard</a>
+        <a href="#" data-page="members"><span class="icon">&#9787;</span> Miembros</a>
+        <a href="#" data-page="events"><span class="icon">&#9733;</span> Eventos</a>
+        <a href="#" data-page="contributions"><span class="icon">$</span> Diezmos y Ofrendas</a>
+        <a href="#" data-page="groups"><span class="icon">&#9823;</span> Grupos y Ministerios</a>
+        <a href="#" data-page="content"><span class="icon">&#9998;</span> Contenido</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <strong id="userName"></strong>
+          <span id="userRole"></span>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="Auth.logout()" style="width:100%">Cerrar Sesion</button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+      <!-- Content loaded dynamically -->
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContent"></div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/members.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/contributions.js"></script>
+  <script src="js/groups.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
